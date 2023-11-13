@@ -3,13 +3,13 @@ SRCS =	./srcs/main.c \
 ./srcs/operations2.c \
 ./srcs/operations3.c \
 ./srcs/sort.c \
-./srcs/ftsort2.c \
-./srcs/find_steps.c \
+./srcs/sort2.c \
+./srcs/find.c \
 ./srcs/calculate_steps.c \
-./srcs/check_functions.c \
-./srcs/fsort_min.c \
-./srcs/fsort_reverse.c \
-./srcs/fsort_utils.c \
+./srcs/check.c \
+./srcs/min.c \
+./srcs/reverse.c \
+./srcs/utils.c \
 
 NAME = push_swap
 CC = gcc
@@ -40,4 +40,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all bonus clean fclean re 
+.PHONY: all clean fclean re 
