@@ -5,75 +5,75 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 17:31:13 by mubeyaz           #+#    #+#             */
-/*   Updated: 2023/11/13 20:33:41 by marvin           ###   ########.fr       */
+/*   Created: 2023/11/14 17:26:54 by mubeyaz           #+#    #+#             */
+/*   Updated: 2023/11/14 17:28:28 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    up(t_list *list, char c)
+void	up(t_list *list, char c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (c == 'a')
-    {
-        while (list->a_len >= i)
-        {
-            list->a[list->a_len - i + 1] = list->a[list->a_len - i];
-            i++;
-        }
-    }
-    else if (c == 'b')
-    {
-        while (list->b_len >= i)
-        {
-            list->b[list->b_len - i + 1] = list->b[list->b_len - i];
-            i++;
-        }
-    }
+	i = 0;
+	if (c == 'a')
+	{
+		while (list->a_len >= i)
+		{
+			list->a[list->a_len - i + 1] = list->a[list->a_len - i];
+			i++;
+		}
+	}
+	else if (c == 'b')
+	{
+		while (list->b_len >= i)
+		{
+			list->b[list->b_len - i + 1] = list->b[list->b_len - i];
+			i++;
+		}
+	}
 }
 
-void    down(t_list *list, char c)
+void	down(t_list *list, char c)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    if (c == 'a')
-    {
-        while (list->a_len > i)
-        {
-            list->a[i] = list->a[i + 1];
-            i++;
-        }
-    }
-    else if (c == 'b')
-    {
-        while (list->b_len > i)
-        {
-            list->b[i] = list->b[i + 1];
-            i++;
-        }
-    }
+	i = 0;
+	if (c == 'a')
+	{
+		while (list->a_len > i)
+		{
+			list->a[i] = list->a[i + 1];
+			i++;
+		}
+	}
+	else if (c == 'b')
+	{
+		while (list->b_len > i)
+		{
+			list->b[i] = list->b[i + 1];
+			i++;
+		}
+	}
 }
 
-void    sa(t_list *list)
+void	sa(t_list *list)
 {
-    int temp;
+	int	temp;
 
-    if (list->a_len > 1)
-    {
-        temp = list->a[0];
-        list->a[0] = list->a[1];
-        list->a[1] = temp;
-        ft_printf("sa\n");
-    }
+	if (list->a_len > 1)
+	{
+		temp = list->a[0];
+		list->a[0] = list->a[1];
+		list->a[1] = temp;
+		ft_printf("sa\n");
+	}
 }
 
-void    sb(t_list *list)
+void	sb(t_list *list)
 {
-	int temp;
+	int	temp;
 
 	if (list->b_len > 1)
 	{
@@ -84,9 +84,9 @@ void    sb(t_list *list)
 	}
 }
 
-void    ss(t_list *list)
+void	ss(t_list *list)
 {
-	int temp;
+	int	temp;
 
 	if (list->a_len > 1)
 	{

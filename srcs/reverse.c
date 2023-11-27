@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   reverse.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mubeyaz <mubeyaz@42.fr>                    +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 18:29:38 by mubeyaz           #+#    #+#             */
-/*   Updated: 2023/11/13 18:29:39 by mubeyaz          ###   ########.fr       */
+/*   Created: 2023/11/14 17:27:25 by mubeyaz           #+#    #+#             */
+/*   Updated: 2023/11/14 17:28:13 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"push_swap.h"
+#include "push_swap.h"
 
 int	fstart_rrr_utils(t_list *list, int take)
 {

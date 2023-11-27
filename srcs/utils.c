@@ -3,28 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mubeyaz <mubeyaz@student.42.fr>            +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 13:11:00 by mubeyaz           #+#    #+#             */
-/*   Updated: 2023/11/08 13:25:27 by mubeyaz          ###   ########.fr       */
+/*   Created: 2023/11/14 17:27:51 by mubeyaz           #+#    #+#             */
+/*   Updated: 2023/11/14 17:28:00 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int word_counter(char **str,char c)
+int	word_counter(char **str, char c)
 {
-    int i;
-    int wordcount;
-    int index;
-    index = 1;
-    wordcount = 0;
-    while(str[index])
-    {
-        i = 0;
-        while(str[index][i] != '\0' && str[index][i] == c)
-            i++;
-        while (str[index][i] != '\0')
+	int	i;
+	int	wordcount;
+	int	index;
+
+	index = 1;
+	wordcount = 0;
+	while (str[index])
+	{
+		i = 0;
+		while (str[index][i] != '\0' && str[index][i] == c)
+			i++;
+		while (str[index][i] != '\0')
 		{
 			while (str[index][i] != '\0' && str[index][i] != c)
 				i++;
@@ -32,10 +33,11 @@ int word_counter(char **str,char c)
 			while (str[index][i] != '\0' && str[index][i] == c)
 				i++;
 		}
-        index++;
-    }
-    return(wordcount);
+		index++;
+	}
+	return (wordcount);
 }
+
 void	free_split(char **split)
 {
 	int	i;
@@ -95,16 +97,16 @@ int	ft_atoi2(char *str, t_list *list)
 	return (result * sign);
 }
 
-int take_split(t_list *list,char **split)
+int	take_split(t_list *list, char **split)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while(split[i])
-    {
-        list->a[i] = ft_atoi2(split[i],list);
-        list->a_len++;
-        i++;
-    }
-    return (i);
+	i = 0;
+	while (split[i])
+	{
+		list->a[i] = ft_atoi2(split[i], list);
+		list->a_len++;
+		i++;
+	}
+	return (i);
 }
